@@ -94,18 +94,18 @@ public class Serializable {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         Configuration conf = new Configuration();
-//        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 
         Job job = Job.getInstance(conf, "Serializable"); // 实例化一道作业
         job.setJarByClass(Serializable.class);
 
         // 指定job的mapper的输出的类型 k2 v2
-        job.setMapperClass(SalaryTotalMapper.class); // 设置Mapper类
+        job.setMapperClass(Serializable.SalaryTotalMapper.class); // 设置Mapper类
         job.setMapOutputKeyClass(IntWritable.class);
         job.setMapOutputValueClass(Employee.class);
 
         // !!!!!!!!!指定分区规则
-        job.setPartitionerClass(SalaryParitioner.class);
+        job.setPartitionerClass(Serializable.SalaryParitioner.class);
         // !!!!!!!!!指定建立几个分区
         job.setNumReduceTasks(3);
 
@@ -114,6 +114,7 @@ public class Serializable {
         job.setOutputKeyClass(IntWritable.class);// 输出key的类型， 部门号
         job.setOutputValueClass(IntWritable.class);// 输出value的类型， 员工
 
+
         Path inputPath = new Path(".\\src\\inputdata\\emp.csv");
         Path outputPath = new Path(".\\src\\outputdata\\实验六Serializable");
 
@@ -121,7 +122,6 @@ public class Serializable {
         FileSystem fs = FileSystem.get(conf);
         if (fs.exists(outputPath)){
             // 文件存在，删除该文件
-            System.out.println("输出文件已经存在！");
             fs.delete(outputPath, true);
         }
 
@@ -135,6 +135,7 @@ public class Serializable {
         FileInputFormat.setInputPaths(job, inputPath);
         FileOutputFormat.setOutputPath(job, outputPath);
 
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 
     public static class Employee implements Writable {

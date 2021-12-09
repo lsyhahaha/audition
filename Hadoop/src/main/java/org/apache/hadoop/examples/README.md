@@ -344,6 +344,7 @@ public class TopScore {
 package org.apache.hadoop.examples;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -456,17 +457,28 @@ public class Serializable {
         job.setOutputKeyClass(IntWritable.class);// 输出key的类型， 部门号
         job.setOutputValueClass(IntWritable.class);// 输出value的类型， 员工
 
-        // 集群
-//        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+
+        Path inputPath = new Path(".\\src\\inputdata\\emp.csv");
+        Path outputPath = new Path(".\\src\\outputdata\\实验六Serializable");
+
+        // if outputPAth exist
+        FileSystem fs = FileSystem.get(conf);
+        if (fs.exists(outputPath)){
+            // 文件存在，删除该文件
+            fs.delete(outputPath, true);
+        }
+
+        // 集群测试
+//        for (int i = 0; i < otherArgs.length - 1; ++i) {
+//            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
+//        }
+//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[otherArgs.length - 1]));
 
         // 本地测试
-        FileInputFormat.setInputPaths(job, new Path("C:\\Users\\98708\\Desktop\\emp.csv"));
-        FileOutputFormat.setOutputPath(job, new Path("C:\\Users\\98708\\Desktop\\output2"));
+        FileInputFormat.setInputPaths(job, inputPath);
+        FileOutputFormat.setOutputPath(job, outputPath);
 
-        // 执行任务
-        job.waitForCompletion(true);
-
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 
     public static class Employee implements Writable {

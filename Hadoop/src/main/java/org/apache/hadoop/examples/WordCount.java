@@ -63,11 +63,8 @@ public class WordCount {
 
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
-//        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-//        if (otherArgs.length < 2) {
-//            System.err.println("Usage: wordcount <in> [<in>...] <out>");
-//            System.exit(2);
-//        }
+        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+
         // 实例化一道作业
         Job job = Job.getInstance(conf, "word count");
         job.setJarByClass(WordCount.class);
