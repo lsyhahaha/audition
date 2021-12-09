@@ -1,6 +1,7 @@
 package org.apache.hadoop.examples;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -93,18 +94,18 @@ public class Serializable {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         Configuration conf = new Configuration();
-        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+//        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 
         Job job = Job.getInstance(conf, "Serializable"); // 实例化一道作业
         job.setJarByClass(Serializable.class);
 
         // 指定job的mapper的输出的类型 k2 v2
-        job.setMapperClass(Serializable.SalaryTotalMapper.class); // 设置Mapper类
+        job.setMapperClass(SalaryTotalMapper.class); // 设置Mapper类
         job.setMapOutputKeyClass(IntWritable.class);
         job.setMapOutputValueClass(Employee.class);
 
         // !!!!!!!!!指定分区规则
-        job.setPartitionerClass(Serializable.SalaryParitioner.class);
+        job.setPartitionerClass(SalaryParitioner.class);
         // !!!!!!!!!指定建立几个分区
         job.setNumReduceTasks(3);
 
@@ -113,16 +114,26 @@ public class Serializable {
         job.setOutputKeyClass(IntWritable.class);// 输出key的类型， 部门号
         job.setOutputValueClass(IntWritable.class);// 输出value的类型， 员工
 
-        // 集群
-//        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+        Path inputPath = new Path(".\\src\\inputdata\\emp.csv");
+        Path outputPath = new Path(".\\src\\outputdata\\实验六Serializable");
+
+        // if outputPAth exist
+        FileSystem fs = FileSystem.get(conf);
+        if (fs.exists(outputPath)){
+            // 文件存在，删除该文件
+            System.out.println("输出文件已经存在！");
+            fs.delete(outputPath, true);
+        }
+
+        // 集群测试
+//        for (int i = 0; i < otherArgs.length - 1; ++i) {
+//            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
+//        }
+//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[otherArgs.length - 1]));
 
         // 本地测试
-        FileInputFormat.setInputPaths(job, new Path("C:\\Users\\98708\\Desktop\\emp.csv"));
-        FileOutputFormat.setOutputPath(job, new Path("C:\\Users\\98708\\Desktop\\output"));
-
-        // 执行任务
-        job.waitForCompletion(true);
+        FileInputFormat.setInputPaths(job, inputPath);
+        FileOutputFormat.setOutputPath(job, outputPath);
 
     }
 

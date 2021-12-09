@@ -2,6 +2,7 @@ package org.apache.hadoop.examples;
 
 import org.apache.commons.lang.ObjectUtils;
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.*;
 import org.apache.hadoop.mapreduce.Job;
@@ -67,13 +68,25 @@ public class LookUpTable {
         job.setOutputValueClass(Text.class);// 输出value的类型
 
 
-        // 集群
-//        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+        Path inputPath = new Path(".\\src\\inputdata\\access_log.20060805.decode.filter");
+        Path outputPath = new Path(".\\src\\outputdata\\实验八LookUpTable");
+
+        // if outputPAth exist
+        FileSystem fs = FileSystem.get(conf);
+        if (fs.exists(outputPath)){
+            // 文件存在，删除该文件
+            fs.delete(outputPath, true);
+        }
+
+        // 集群测试
+//        for (int i = 0; i < otherArgs.length - 1; ++i) {
+//            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
+//        }
+//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[otherArgs.length - 1]));
 
         // 本地测试
-        FileInputFormat.setInputPaths(job, new Path("C:\\Users\\98708\\Desktop\\access_log.20060805.decode.filter"));
-        FileOutputFormat.setOutputPath(job, new Path("C:\\Users\\98708\\Desktop\\output"));
+        FileInputFormat.setInputPaths(job, inputPath);
+        FileOutputFormat.setOutputPath(job, outputPath);
 
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }

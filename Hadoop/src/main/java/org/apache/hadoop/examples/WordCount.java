@@ -18,6 +18,7 @@
 package org.apache.hadoop.examples;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -62,30 +63,45 @@ public class WordCount {
 
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
-        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-        if (otherArgs.length < 2) {
-            System.err.println("Usage: wordcount <in> [<in>...] <out>");
-            System.exit(2);
-        }
+//        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+//        if (otherArgs.length < 2) {
+//            System.err.println("Usage: wordcount <in> [<in>...] <out>");
+//            System.exit(2);
+//        }
         // 实例化一道作业
         Job job = Job.getInstance(conf, "word count");
         job.setJarByClass(WordCount.class);
+
         // Mapper类型
         job.setMapperClass(TokenizerMapper.class);
-        //
-        job.setCombinerClass(IntSumReducer.class);
+        job.setMapOutputKeyClass(Text.class);
+        job.setMapOutputValueClass(IntWritable.class);
+
         // Reducer类型
         job.setReducerClass(IntSumReducer.class);
-        // reduce输出Key类型
-        job.setOutputKeyClass(Text.class);
-        // reduce输出Value类型
-        job.setOutputValueClass(IntWritable.class);
-        for (int i = 0; i < otherArgs.length - 1; ++i) {
-            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
+        job.setOutputKeyClass(Text.class);  // reduce输出Key类型
+        job.setOutputValueClass(IntWritable.class);// reduce输出Value类型
+
+        Path inputPath = new Path(".\\src\\inputdata\\words.txt");
+        Path outputPath = new Path(".\\src\\outputdata\\实验四WordCount");
+
+        // if outputPAth exist
+        FileSystem fs = FileSystem.get(conf);
+        if (fs.exists(outputPath)){
+            // 文件存在，删除该文件
+            fs.delete(outputPath, true);
         }
-//        FileInputFormat.setInputPaths(job, new Path("C:\\Users\\98708\\Desktop\\word.txt"));
-        FileOutputFormat.setOutputPath(job, new Path(otherArgs[otherArgs.length - 1]));
-//        FileOutputFormat.setOutputPath(job, new Path("C:\\Users\\98708\\Desktop\\output"));
+
+        // 集群测试
+//        for (int i = 0; i < otherArgs.length - 1; ++i) {
+//            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
+//        }
+//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[otherArgs.length - 1]));
+
+        // 本地测试
+        FileInputFormat.setInputPaths(job, inputPath);
+        FileOutputFormat.setOutputPath(job, outputPath);
+
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
 }

@@ -1,6 +1,7 @@
 package org.apache.hadoop.examples;
 
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -82,13 +83,25 @@ public class SecondSort {
         job.setSortComparatorClass(IntWritableDecreasingComparator.class);
 
 
-        // 集群
-//        FileInputFormat.addInputPath(job, new Path(otherArgs[0]));
-//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[1]));
+        Path inputPath = new Path(".\\src\\inputdata\\SecondOrder.txt");
+        Path outputPath = new Path(".\\src\\outputdata\\实验九SecondSort");
+
+        // if outputPAth exist
+        FileSystem fs = FileSystem.get(conf);
+        if (fs.exists(outputPath)){
+            // 文件存在，删除该文件
+            fs.delete(outputPath, true);
+        }
+
+        // 集群测试
+//        for (int i = 0; i < otherArgs.length - 1; ++i) {
+//            FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
+//        }
+//        FileOutputFormat.setOutputPath(job, new Path(otherArgs[otherArgs.length - 1]));
 
         // 本地测试
-        FileInputFormat.setInputPaths(job, new Path(".\\src\\inputdata\\SecondOrder.txt"));
-        FileOutputFormat.setOutputPath(job, new Path(".\\src\\outputdata\\SecondOrder"));
+        FileInputFormat.setInputPaths(job, inputPath);
+        FileOutputFormat.setOutputPath(job, outputPath);
 
         System.exit(job.waitForCompletion(true) ? 0 : 1);
     }
