@@ -69,11 +69,11 @@ public class TotalJoin {
     }
 
     public static class JoinOneReducer extends Reducer<Text, Text, Text, IntWritable> {
-        int count = 0;
-        String Department_name = "";
 
         @Override
         public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+            int count = 0;
+            String Department_name = "";
 
             for (Text x: values){
                 String[] words = x.toString().split(",");
@@ -94,12 +94,12 @@ public class TotalJoin {
     }
 
     public static class JoinTwoReducer extends Reducer<Text, Text, Text, Text>{
-        int count = 0;  // 部门工资
-        String Department_name = ""; // 部门名称
-        int total = 0; // 部门人数
 
         @Override
         public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+            int count = 0;  // 部门工资
+            String Department_name = ""; // 部门名称
+            int total = 0; // 部门人数
 
             for (Text x: values){
                 String[] words = x.toString().split(",");
@@ -125,13 +125,12 @@ public class TotalJoin {
     }
 
     public static class JoinThreeReducer extends Reducer<Text, Text, Text, Text>{
-        String Department_name = ""; // 部门名称
-        String name; // 最早入职的员工姓名
-        String date = "2021/12-09"; // 最早入职人的姓名
-
-
         @Override
         public void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+            String Department_name = ""; // 部门名称
+            String name = "lishiyong"; // 最早入职的员工姓名
+            String date = "2021/12-09"; // 最早入职人的姓名
+
             for (Text x: values){
                 String[] words = x.toString().split(",");
 //                System.out.println("x：" + x);
@@ -184,12 +183,11 @@ public class TotalJoin {
         Path outputPath = new Path(".\\src\\outputdata\\实验十\\JOIN(1)结果");
 
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("1.求：部门名称 部门总工资\n2.求：部门名称 部门人数 部门平均工资\n3.求：部门名称 最早入职的员工姓名 入职日期");
-//        System.out.println("请选择[1\\2\\3]：");
-//        int a = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("1.求：部门名称 部门总工资\n2.求：部门名称 部门人数 部门平均工资\n3.求：部门名称 最早入职的员工姓名 入职日期");
+        System.out.println("请选择[1\\2\\3]：");
+        int a = scanner.nextInt();
 
-        int a = 3; // 测试2
 
         if (a == 1){
             outputPath = new Path(".\\src\\outputdata\\实验十\\JOIN(1)结果");
