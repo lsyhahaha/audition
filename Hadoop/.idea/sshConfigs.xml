@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="192.168.0.210" id="aca6d530-741f-4997-aeaf-f4690c0cb5ea" port="22" customName="虚拟机node1" nameFormat="CUSTOM" username="root">
+        <option name="customName" value="虚拟机node1" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

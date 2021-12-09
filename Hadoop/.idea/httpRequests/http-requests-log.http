@@ -1,0 +1,7 @@
+GET https://httpbin.org/ip
+Accept: application/json
+
+<> 2021-12-05T161446.200.json
+
+###
+

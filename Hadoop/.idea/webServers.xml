@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="026a1825-fe8d-481d-9b2c-edeac8fb9565" name="lsyroot">
+        <fileTransfer accessType="SFTP" host="39.105.55.198" port="22" sshConfigId="c5c5b23f-f6bd-4201-80e3-b45456276a49" sshConfig="lsy的root用户">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="25efbc9a-2703-4a65-9c00-8e8fc54654bb" name="lcroot">
+        <fileTransfer accessType="SFTP" host="150.158.145.173" port="22" sshConfigId="1db34ee3-bcc8-4096-a750-349b408e39fd" sshConfig="lc的root用户">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="93112eea-d166-42f0-8264-82c012844b00" name="虚拟机node0">
+        <fileTransfer accessType="SFTP" host="192.168.0.200" port="22" sshConfigId="04fdc8f4-c41c-42ba-b799-6a2ac7b6b3e1" sshConfig="虚拟机node0">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="cc41e8b0-f497-4694-a2f1-5789ae38af25" name="虚拟机node2">
+        <fileTransfer accessType="SFTP" host="192.168.0.220" port="22" sshConfigId="4a7a0f32-0154-4c4d-a47e-d2ab509dfff9" sshConfig="虚拟机node2">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="08609b27-bc04-4b1d-ab80-257ac1530934" name="虚拟机node1">
+        <fileTransfer accessType="SFTP" host="192.168.0.210" port="22" sshConfigId="aca6d530-741f-4997-aeaf-f4690c0cb5ea" sshConfig="虚拟机node1">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
