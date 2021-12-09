@@ -1041,7 +1041,11 @@ public class SecondSort {
 
 ## **实验十 MapReduce编程统计员工的各项数据**
 
-```
+`mapper join`
 
-```
+![image-20211209145715886](images/image-20211209145715886.png)
+
+`reduce join`
+
+![image-20211209151817836](images/image-20211209151817836.png)
 
