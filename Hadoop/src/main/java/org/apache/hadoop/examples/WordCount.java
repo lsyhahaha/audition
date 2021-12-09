@@ -78,7 +78,6 @@ public class WordCount {
         job.setReducerClass(IntSumReducer.class);
         job.setOutputKeyClass(Text.class);  // reduce输出Key类型
         job.setOutputValueClass(IntWritable.class);// reduce输出Value类型
-
         Path inputPath = new Path(".\\src\\inputdata\\words.txt");
         Path outputPath = new Path(".\\src\\outputdata\\实验四WordCount");
 
@@ -100,5 +99,6 @@ public class WordCount {
         FileOutputFormat.setOutputPath(job, outputPath);
 
         System.exit(job.waitForCompletion(true) ? 0 : 1);
+
     }
 }
