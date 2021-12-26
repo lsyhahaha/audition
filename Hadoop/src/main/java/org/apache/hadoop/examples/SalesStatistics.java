@@ -1,16 +1,13 @@
 package org.apache.hadoop.examples;
 
-
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
-import org.apache.hadoop.mapreduce.Partitioner;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
@@ -29,13 +26,11 @@ public class SalesStatistics {
             String data = value.toString();
             // 分词
             String[] words = data.split(",");
-            // ["13", "987", .... "123.16"]
             // 创建订单对象
             Order e = new SalesStatistics.Order();
             // 设置订单属性,产品ID，客户ID，订单日期，渠道ID，促销ID，销售数量，销售总额
             e.set(Integer.parseInt(words[0]), Integer.parseInt(words[1]), words[2], Integer.parseInt(words[3]), Integer.parseInt(words[4]), Integer.parseInt(words[5]), Double.parseDouble(words[6]));
             String year = words[2].split("-")[0];
-
             context.write(new Text(year), e);
         }
     }
@@ -51,12 +46,6 @@ public class SalesStatistics {
                 total_count = total_count + e.getSalesCount();
             }
 
-//            double total_count = 0;
-//            for (Order e: v3){
-//                System.out.println("标记：" + e.getSalesCount());
-//                total_count = total_count + e.getSalesCount();
-//            }
-
             context.write(k3, new Text(String.valueOf(total_sales) + " " + total_count));
         }
     }
@@ -66,7 +55,7 @@ public class SalesStatistics {
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 
         Job job = Job.getInstance(conf, "SalesStatistics"); // 实例化一道作业
-        job.setJarByClass(org.apache.hadoop.examples.SalesStatistics.class);
+        job.setJarByClass(SalesStatistics.class);
 
         // 指定job的mapper的输出的类型 k2 v2
         job.setMapperClass(SalesStatistics.SalesTotalMapper.class); // 设置Mapper类
@@ -175,3 +164,75 @@ public class SalesStatistics {
 
     }
 }
+
+//一、概述
+//        1.大数据特点：4V：Volume、Variety、Value和Velocity
+//           大数据技术核心：可靠存储和高效计算
+//        2.Google的三驾马车
+//          2003：GFS《The Google File System》
+//          2004：MapReduce  《MapReduce: Simplified Data Processing on Large Clusters》
+//          2006：BigTable  《Bigtable: A Distributed Storage System for Structured Data》
+//          GFS架构：GFS Master和Chunk Server
+//          MapReduce思想：分而治之——分散任务，汇总结果
+//          BigTable的数据模型：列族
+//        3.Hadoop
+//          Hadoop的HDFS、MapReduce、HBase分别是对Google公司的GFS、MapReduce、BigTable思想的开源实现。
+//          HDFS架构：NameNode、DataNode、SecondareNameNode
+//          机架感知
+//          Hadoop的发展史
+//          Hadoop2.0比1.0：增加了YARN；还支持HDFS的Federation（联邦）、HA（High Availability）等
+//          Hadoop生态圈：HDFS、Yarn、MapReduce
+//
+//        二、Hadoop集群部署
+//          Hadoop的三种安装模式：单机模式、伪分布模式、完全分布式模式
+//          下面进程都将启动：
+//          HDFS:
+//            Namenode（master主节点进程）
+//            Datanode（slave从节点进程）
+//            SecondaryNamenode （master主节点进程）
+//          Yarn:
+//           Resourcemanager （master主节点进程）
+//           Nodemanager （slave从节点进程）
+//
+//          安装准备工作：
+//          网络环境的配置（主机名hostname的配置、网络ip地址和hostname的映射关系）
+//          设置SSH免密登录（完全分布式模式中，任意两个节点之间均需要设置）
+//          1）生成密钥对：
+//          # ssh-keygen –t rsa
+//          2）复制密钥id_rsa.pub为authorized_keys
+//          # cp id_rsa.pub authorized_keys
+//          3）免密登录的测试
+//          # ssh namenode
+//          安装jdk：配置环境变量并生效
+//          安装hadoop
+//          设置Hadoop配置文件，所有需要设置的配置文件的路径位于目录：
+//          ${HADOOP_HOME}/etc/hadoop
+//          hadoop-env.sh  core-site.xml  hdfs-site.xml  mapred-site.xml  yarn-site.xml  slaves
+//          HDFS格式化及启停
+//          1)格式化文件系统
+//          # bin/hdfs namenode –format
+//          2)启动HDFS
+//          # sbin/start-dfs.sh
+//          # sbin/start-yarn.sh
+//          3)检测是否启动成功
+//          # jps
+//
+//        三、HDFS
+//          HDFS文件系统的设计思想、基本架构：
+//          其中，NameNode、SecondaryNameNode和DataNode各自职责
+//          HDFS读写数据流程：两个图
+//          FileSystem    FSDataInputStream   FSDataOutputStream
+//          HDFS Shell命令：mkdir、ls、cat……   （实验二）
+//          Java API操作HDFS    （实验三）
+//
+//          四、Yarn
+//          YARN的架构：主从架构 图4-6
+//          ResourceManager、NodeManager、Container、ApplicationMaster
+//          Yarn中应用运行机制：图4-7
+//
+//        五、MapReduce
+//          MapRuduce思想：分而治之
+//          MapReduce编程模型   键值对(k,v)
+//          Mapper、Reducer、Combiner、Partitioner组件
+//          MapRuduce的工作机制 图5-11
+//          Shuffle的工作过程 图5-13
