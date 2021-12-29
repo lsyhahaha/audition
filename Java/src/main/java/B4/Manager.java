@@ -15,7 +15,7 @@ public class Manager {
     * */
 
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, SQLException {
-        // 连接数据库，创建Statement对象
+        // 连接数据库
         String url="jdbc:mysql://localhost:3306/depo?serverTimezone=UTC";
         String user="root";
         String pwd="123456";
@@ -23,6 +23,7 @@ public class Manager {
         Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
         //建立到MySQL的连接
         Connection conn= DriverManager.getConnection(url,user,pwd);
+        System.out.println(conn.isClosed());
 
         // 用循环完成再次回到主界面
         while (true){
