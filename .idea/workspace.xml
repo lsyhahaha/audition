@@ -1,26 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7758d549-3ab6-4d48-882e-fb87b834e843" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/Hadoop/src/main/java/org/apache/hadoop/examples/SalesStatistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/Hadoop/src/main/java/org/apache/hadoop/examples/SalesStatistics.java" afterDir="false" />
+    <list default="true" id="7758d549-3ab6-4d48-882e-fb87b834e843" name="变更" comment="good">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/java黎仕勇.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk-9_汉化版.chm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/jdk1.8.0_311源码.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/jdk1.8.0_311源码.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/src/src.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/src/src/ReservedLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/src/main/java/day_01_List/Collectuion_ArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A2/phone.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scala/Scala.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scala/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Scala/src/main/scala/com/atguigu/chapter01/TestScala.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/exportToHTML/A7/Matrix.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java/exportToHTML/A7/Matrix.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/exportToHTML/A7/Square.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java/exportToHTML/A7/Square.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/exportToHTML/A7/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java/exportToHTML/A7/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A2/AddressList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A2/AddressList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A2/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A2/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A2/phone.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A7/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A7/Matrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A7/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A7/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/Depository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/Depository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/Goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/connectdb.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/connectdb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/需求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/需求.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/target/classes/A7/Matrix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/target/classes/A7/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/target/classes/B4/Depository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/target/classes/B4/Goods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/target/classes/B4/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/target/classes/B4/connectdb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java/黎仕勇java课程设计.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
   <component name="ProjectId" id="22ig0aCwWxhwuA7EsgQyPVYM7Dk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager" selected="应用程序.Comment">
+    <configuration name="Comment" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.chapter01.Comment" />
+      <module name="Scala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.chapter01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestScala (1)" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.chapter01.TestScala" />
+      <module name="Scala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.chapter01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestScala" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.atguigu.chapter01.TestScala" />
+      <module name="Scala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.atguigu.chapter01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="应用程序.TestScala" />
+      <item itemvalue="应用程序.TestScala (1)" />
+      <item itemvalue="应用程序.Comment" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Comment" />
+        <item itemvalue="应用程序.TestScala" />
+        <item itemvalue="应用程序.TestScala (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -31,7 +151,26 @@
       <option name="presentableId" value="Default" />
       <updated>1640325608094</updated>
       <workItem from="1640325611531" duration="6000" />
+      <workItem from="1645856709443" duration="5060000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="good" />
+    <option name="LAST_COMMIT_MESSAGE" value="good" />
   </component>
 </project>
