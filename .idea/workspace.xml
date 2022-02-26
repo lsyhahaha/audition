@@ -4,53 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7758d549-3ab6-4d48-882e-fb87b834e843" name="变更" comment="good">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/java黎仕勇.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk-9_汉化版.chm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/jdk1.8.0_311源码.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/jdk1.8.0_311源码.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/src/src.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/jdk1.8.0_311源码/src/src/ReservedLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/src/main/java/day_01_List/Collectuion_ArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A2/phone.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scala/Scala.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scala/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Scala/src/main/scala/com/atguigu/chapter01/TestScala.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/exportToHTML/A7/Matrix.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java/exportToHTML/A7/Matrix.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/exportToHTML/A7/Square.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java/exportToHTML/A7/Square.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/exportToHTML/A7/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Java/exportToHTML/A7/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A2/AddressList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A2/AddressList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A2/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A2/Contact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A2/phone.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A7/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A7/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/A7/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/A7/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/Depository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/Depository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/connectdb.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/connectdb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/src/main/java/B4/需求.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Java/src/main/java/ks/B4/需求.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/target/classes/A7/Matrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/target/classes/A7/Square.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/target/classes/B4/Depository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/target/classes/B4/Goods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/target/classes/B4/Manager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/target/classes/B4/connectdb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java/黎仕勇java课程设计.docx" beforeDir="false" />
-    </list>
+    <list default="true" id="7758d549-3ab6-4d48-882e-fb87b834e843" name="变更" comment="good" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,8 +105,23 @@
       <option name="presentableId" value="Default" />
       <updated>1640325608094</updated>
       <workItem from="1640325611531" duration="6000" />
-      <workItem from="1645856709443" duration="5060000" />
+      <workItem from="1645856709443" duration="5248000" />
     </task>
+    <task id="LOCAL-00001" summary="good">
+      <created>1645862618569</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1645862618569</updated>
+    </task>
+    <task id="LOCAL-00002" summary="good">
+      <created>1645862705382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645862705382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
